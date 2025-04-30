@@ -8,6 +8,8 @@ export default function ChatWindow({ messages, onFollowUpClick, loading }) {
       {messages.map((msg, idx) => (
         <div key={idx}>
           <MessageBubble msg={msg} />
+
+          
           {msg.followUps?.length ? (
             <div className="mt-2 flex flex-wrap gap-2">
               {msg.followUps.map((q, i) => (
